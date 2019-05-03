@@ -88,7 +88,6 @@ function movie(input) {
   } else {
     axios.get("http://www.omdbapi.com/?t=" + input + "&y=&plot=short&apikey=trilogy").then(
       function(response) {
-        console.log(response.data)
         console.log("----------------------------------------")
         console.log("Title: " + response.data.Title)
         console.log("----------------------------------------")
@@ -111,7 +110,7 @@ function doWhatItSays() {
       }
       var dataArr = data.split(",");
       if(dataArr.length === 2){
-        whichCommand(dataArr[0], input = dataArr[1])
+        whichCommand(dataArr[0], dataArr[1])
       } else if(dataArr.length === 1) {
         whichCommand(dataArr[0])
       }
