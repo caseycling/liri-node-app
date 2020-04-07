@@ -103,7 +103,6 @@ function movie(input) {
 function doWhatItSays() {
   if(command === 'do-what-it-says') {
     fs.readFile("random.txt", "utf8", function(error, data) {
-
       // If the code experiences any errors it will log the error to the console.
       if (error) {
         return console.log(error);
